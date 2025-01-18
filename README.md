@@ -2,6 +2,8 @@
 
 Tested docker build in kali.
 
+FOR EDUCATIONAL AND RESEARCH PURPOSES ONLY!
+
 Requirements and preperation:
 ------------------
 1. NGINX on the host: https://nginx.org/en/linux_packages.html 
